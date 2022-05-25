@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  firstname    String   @db.VarChar(255)
+  lastname     String   @db.VarChar(255)
+  email        String   @db.VarChar(255)
+  phone        String   @db.VarChar(55)
+  birthday     DateTime @db.Date()
+  gender       String   @db.VarChar(10)
+  province     String   @db.VarChar(55)
+  username     String   @db.VarChar(255)
+  password     String   @db.VarChar(255)
+}
+
+
+
+model Admin {
+  id          Int       @id @default(autoincrement())
+  createAt    DateTime  @default(now())
+  email       String    @db.VarChar(255)
+  password    String    @db.VarChar(255)
+  
+}
+
+
+
+
+model Science {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(150)
+  count_test  Int       @default(0)
+  followers   Int       @default(0)
+  createAt    DateTime  @default(now())
+  logo        String    @db.VarChar(255)
+}
+
+
+
+
+model Question {
+  id          Int       @id @default(autoincrement())
+  createAt    DateTime  @default(now())
+  science     String?
+  authorId    Int?
+  que_logo    String? 
+  question    String    
+  variant_a   String    @db.VarChar(255)
+  variant_b   String    @db.VarChar(255)
+  variant_c   String    @db.VarChar(255)
+  variant_d   String    @db.VarChar(255)
+  correct_v   String    @db.VarChar(255)
+}
+
+
+
+model MarkAnswer {
+  id          Int       @id @default(autoincrement())
+  createAt    DateTime  @default(now())
+  questionId  Int?      
+  answer      String?
+  userId      Int?
+  isCorrect   Boolean?
+}

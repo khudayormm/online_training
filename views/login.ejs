@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Score</title>
+    <script src="https://kit.fontawesome.com/423bb2823d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5\css\bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+  </head>
+  <body>
+
+
+    
+    <section class="bg-danger text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="mt-2">Sayt test rejimida ishlayapti!</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include('tools/Navbar.ejs') -%>
+
+
+
+    <div class="mt-5 login-content">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button>
+             -->
+
+            <div class="row">
+              <div class="col-12 text-center">
+                <button class="btn btn-primary text-light">KIRISH</button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 mt-2 text-center">
+                <a href="/register">Ro'yxatdan o'tish</a>
+              </div>
+            </div>
+              <!-- <div class="google-auth col-12">
+                <button class="btn btn-primary"> <i class="fa fa-google" aria-hidden="true"></i> GOOGLE BILAN KIRISH</button>
+              </div> -->
+          </form>
+    </div>
+      
+
+    <script src="bootstrap-5\js\bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+  </body>
+</html>
