@@ -3,8 +3,6 @@ const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
 
-
-
 module.exports = async (req, res) => {
     const { email } = require(req.body)
     
