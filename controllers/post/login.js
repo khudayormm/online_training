@@ -43,7 +43,7 @@ module.exports = async (req, res) => {
     try {
         const token = jwt.sign({ id: user.id }, process.env.SECRET)
         res.cookie('token', token)
-        res.redirect('/')
+        res.redirect('/testlar')
     } catch (error) {
         console.log(error)
     }

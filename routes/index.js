@@ -1,10 +1,10 @@
 const { Router } = require('express');
+const verify = require('../auth/verifyUser')
 
 const router = Router()
 
-router.get('/', require('../controllers/render/home'))
+router.get('/', verify, require('../controllers/render/home')) 
 router.get('/testlar', require('../controllers/render/tests'))
-router.get('/login', require('../controllers/render/login'))
 router.get('/register', require('../controllers/render/register'))
 
 
